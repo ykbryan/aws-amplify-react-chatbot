@@ -13,19 +13,26 @@ class App extends Component {
     super();
     this.state = {
       messageList: [],
-      tempMessageList: []
+      tempMessageList: [],
+      hasResponded: true
     };
   }
 
   _onMessageWasSent = (message) => {
 
+    let currentMessageList = this.state.messageList
+    if (this.state.hasResponded === false) {
+      currentMessageList.pop()
+    }
+
     this.setState({
-      tempMessageList: [...this.state.messageList, message],
-      messageList: [...this.state.messageList, message, {
+      tempMessageList: [...currentMessageList, message],
+      messageList: [...currentMessageList, message, {
         author: 'lex',
         type: 'emoji',
         data: { emoji: "💬" }
-      }]
+      }],
+      hasResponded: false
     })
 
     // Set timeout to check if the temp message is working
@@ -42,7 +49,8 @@ class App extends Component {
         author: 'lex',
         type: 'text',
         data: { text: response.message }
-      }]
+      }],
+      hasResponded: true
     })
   }
 
