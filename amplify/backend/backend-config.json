@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"cognito21c4225e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"interactions": {
+		"weblex": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	}
+}

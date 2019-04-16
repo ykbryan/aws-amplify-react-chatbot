@@ -31,3 +31,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+#sc-launcher {
+  text-align: left
+}
