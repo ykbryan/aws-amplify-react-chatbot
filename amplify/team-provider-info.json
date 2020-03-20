@@ -1,18 +1,19 @@
 {
-    "master": {
+    "prod": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-react-chat-20190416142038-authRole",
-            "UnauthRoleArn": "arn:aws:iam::566416766292:role/amplify-react-chat-20190416142038-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::566416766292:role/amplify-react-chat-20190416142038-authRole",
+            "AuthRoleName": "amplify-amplifyreactchatbot-prod-142640-authRole",
+            "UnauthRoleArn": "arn:aws:iam::566416766292:role/amplify-amplifyreactchatbot-prod-142640-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::566416766292:role/amplify-amplifyreactchatbot-prod-142640-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-react-chat-20190416142038-deployment",
-            "UnauthRoleName": "amplify-react-chat-20190416142038-unauthRole",
-            "StackName": "amplify-react-chat-20190416142038",
-            "StackId": "arn:aws:cloudformation:us-east-1:566416766292:stack/amplify-react-chat-20190416142038/7b70dc40-608d-11e9-b41e-0aad5d963972"
+            "DeploymentBucketName": "amplify-amplifyreactchatbot-prod-142640-deployment",
+            "UnauthRoleName": "amplify-amplifyreactchatbot-prod-142640-unauthRole",
+            "StackName": "amplify-amplifyreactchatbot-prod-142640",
+            "StackId": "arn:aws:cloudformation:us-east-1:566416766292:stack/amplify-amplifyreactchatbot-prod-142640/c6af4520-6a73-11ea-bdbd-0a637f9cba95",
+            "AmplifyAppId": "d3nt1v1dus6fds"
         },
         "categories": {
             "auth": {
-                "cognito21c4225e": {}
+                "cognito5179908e": {}
             }
         }
     }

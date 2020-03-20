@@ -3,56 +3,40 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   env:
     Type: String
-  authRoleName:
-    Type: String
-  unauthRoleName:
-    Type: String
   authRoleArn:
     Type: String
   unauthRoleArn:
     Type: String
+  
+  
 
     
   identityPoolName:
     Type: String
-              
+                
   allowUnauthenticatedIdentities:
-    Type: String
-          
-  lambdaLogPolicy:
-    Type: String
-            
-  openIdLambdaRoleName:
-    Type: String
-            
-  openIdRolePolicy:
-    Type: String
-            
-  openIdLambdaIAMPolicy:
-    Type: String
-            
-  openIdLogPolicy:
     Type: String
             
   authSelections:
     Type: String
-            
+              
   resourceName:
     Type: String
-                                                  
+                                    
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
 
 Resources:
+  
     
   # BEGIN IDENTITY POOL RESOURCES
   
-  
+ 
   IdentityPool:
   # Always created
     Type: AWS::Cognito::IdentityPool
     Properties: 
-      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'amplify_react_chat_identitypool_235da60f', !Join ['',['amplify_react_chat_identitypool_235da60f', '__', !Ref env]]]
+      IdentityPoolName: !If [ShouldNotCreateEnvResources, 'amplifyreactchatbot_identitypool_82a9bf98', !Join ['',['amplifyreactchatbot_identitypool_82a9bf98', '__', !Ref env]]]
             
       AllowUnauthenticatedIdentities: !Ref allowUnauthenticatedIdentities
        
